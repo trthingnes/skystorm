@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SKYSTORM</title>
+  <meta name="description" content="Hør hvordan SKYSTORM høres ut – egenkomponert musikk og ukrainsk folkemusikk.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="hero">
+    <img class="logo" src="assets/logo.jpg" alt="SKYSTORM">
+    <p class="ingress">Egenkomponert musikk og ukrainsk folkemusikk på gitar, duduk, shofar, fiolin og vokal.</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Hvordan høres det ut?</h2>
+
+      <article class="track">
+        <h3><span class="track-no">01</span> Чорнобривці</h3>
+        <audio controls preload="none" src="assets/чорнобрывци.mp3"></audio>
+      </article>
+
+      <article class="track">
+        <h3><span class="track-no">02</span> Ikke gi opp</h3>
+        <audio controls preload="none" src="assets/ikke-gi-opp.mp3"></audio>
+        <details>
+          <summary>Se sangteksten</summary>
+          <a href="assets/ikke-gi-opp.png" target="_blank" rel="noopener">
+            <img src="assets/ikke-gi-opp.png" alt="Sangtekst til «Ikke gi opp»" loading="lazy">
+          </a>
+        </details>
+      </article>
+
+      <article class="track">
+        <h3><span class="track-no">03</span> Pivdenne</h3>
+        <details>
+          <summary>Se sangteksten</summary>
+          <a href="assets/pivdenne.png" target="_blank" rel="noopener">
+            <img src="assets/pivdenne.png" alt="Sangtekst til «Pivdenne – Byen ved Svartehavet»" loading="lazy">
+          </a>
+        </details>
+      </article>
+    </section>
+
+    <section class="about">
+      <h2>Om SKYSTORM</h2>
+      <p>SKYSTORM er et familieprosjekt med egenkomponert musikk, som har sin helt egen musikalske stil skapt gjennom en kreativ sammensmelting av flere ulike musikksjangre. Gruppen består av <strong>Oleksandr Talakh</strong> på gitar, duduk, shofar og vokal, samt <strong>Kseniia Len</strong> og <strong>Yuliia Len</strong> på fiolin. Gruppen kommer opprinnelig fra Ukraina, nærmere bestemt byen Pivdenne i Odesa-regionen, som ligger ved Svartehavskysten. De kom til Norge i mai 2024 og er nå bosatt i Heim kommune.</p>
+      <blockquote>
+        <p>Den unike musikkstilen ble født her i Norge, og vår største drøm er at hver eneste lytter skal kunne finne noe nært, kjent og personlig i musikken vår – noe som berører hjertet og vekker egne følelser og minner. Vi fremfører også ukrainsk folkemusikk med særpreg og musikalske tradisjoner fra Odesa-regionen. Gjennom denne musikken ønsker vi å bevare forbindelsen til våre røtter og hjemlandet Ukraina, som vi savner dypt.</p>
+      </blockquote>
+    </section>
+  </main>
+
+  <script>
+    // Stopp andre låter når én starter
+    document.addEventListener('play', e => {
+      document.querySelectorAll('audio').forEach(a => { if (a !== e.target) a.pause(); });
+    }, true);
+  </script>
+</body>
+</html>
